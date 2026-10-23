@@ -89,7 +89,7 @@ export function Root() {
           <NavItem
             to="/publish"
             icon={
-              <PenSquare className="w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9" />
+              <PenSquare className="w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9 text-[#E1A000]" />
             }
             label="نشر"
             isCenter
@@ -139,7 +139,10 @@ function NavItem({
       {({ isActive }) => (
         <>
           {isCenter ? (
-            <div className="absolute -top-8 md:-top-10 lg:-top-12 bg-card border border-border rounded-full shadow-lg text-foreground hover:text-secondary transition-colors px-[25px] py-[12px] md:px-[30px] md:py-[15px] lg:px-[35px] lg:py-[18px]">
+            <div
+              className="absolute -top-8 md:-top-10 lg:-top-12 bg-card border rounded-full shadow-lg text-foreground hover:text-secondary transition-colors px-[25px] py-[12px] md:px-[30px] md:py-[15px] lg:px-[35px] lg:py-[18px]"
+              style={{ borderStyle: "ridge", borderColor: "#ffffff" }}
+            >
               {icon}
             </div>
           ) : (
@@ -155,7 +158,7 @@ function NavItem({
             </div>
           )}
           <span
-            className={`text-[10px] md:text-xs lg:text-sm font-bold mt-1 md:mt-2 ${isCenter ? "mt-6 md:mt-8 lg:mt-10" : ""}`}
+            className={`text-[10px] md:text-xs lg:text-sm font-bold mt-1 md:mt-2 ${isCenter ? "mt-6 md:mt-8 lg:mt-10 text-[#E1A000]" : ""}`}
           >
             {label}
           </span>
