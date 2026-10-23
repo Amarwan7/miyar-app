@@ -141,9 +141,9 @@ export default function Discover(): JSX.Element {
                       <span className="text-[10px] md:text-xs text-verification font-bold">موثوق</span>
                     </div>
                   ) : (
-                    <div className="flex items-center gap-1 bg-yellow-500/20 px-2 md:px-3 py-0.5 md:py-1 rounded-full border border-yellow-400/30">
-                      <AlertTriangle className="w-3 h-3 md:w-4 md:h-4 text-yellow-300" />
-                      <span className="text-[10px] md:text-xs text-yellow-300 font-bold">غير مؤكد</span>
+                    <div className="flex items-center gap-1 bg-[#E1A000]/20 px-2 md:px-3 py-0.5 md:py-1 rounded-full border border-[#E1A000]/30">
+                      <AlertTriangle className="w-3 h-3 md:w-4 md:h-4 text-[#E1A000]" />
+                      <span className="text-[10px] md:text-xs text-[#E1A000] font-bold">غير مؤكد</span>
                     </div>
                   )}
                 </div>

@@ -5,60 +5,10 @@
   --font-size: 16px;
   --radius: 1.4rem;
 
-  /* Matte Dark Theme */
-  --background: #06122b;
-  --secondary-background: #081126;
-  --surface: #0a1633;
-  --card: #0c1838;
-  --card-hover: #101f45;
-  --popover: #0c1838;
-
-  /* Typography */
-  --foreground: #ffffff;
-  --foreground-soft: #d6dcec;
-  --muted-foreground: #b7bed1;
-  --text-dim: #7e8aa8;
-
-  /* Accent System */
-  --primary: #f6e7a1;
-  --primary-foreground: #06122b;
-
-  --secondary: #b7bed1;
-  --secondary-foreground: #06122b;
-
-  --verification: #2ed3b7;
-  --warning: #e6a23c;
-  --danger: #ef4444;
-
-  /* Borders */
-  --border: #1b2747;
-  --border-soft: #16213d;
-  --input: #111d3a;
-  --input-background: #111d3a;
-  --switch-background: #182544;
-
-  /* UI Depth */
-  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.18);
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.22);
-
   /* Typography Weight */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
-
-  /* Rings */
-  --ring: #f6e7a1;
-
-  /* Navigation */
-  --navbar-bg: rgba(6, 18, 43, 0.96);
-  --navbar-border: rgba(255, 255, 255, 0.05);
-
-  /* News Status */
-  --trusted-bg: rgba(46, 211, 183, 0.14);
-  --trusted-text: #2ed3b7;
-
-  --unverified-bg: rgba(230, 162, 60, 0.12);
-  --unverified-text: #f6c76a;
 
   /* Cards */
   --card-radius: 2rem;
@@ -70,24 +20,24 @@
 }
 
 .dark {
-  --background: #06122b;
-  --secondary-background: #081126;
-  --surface: #0a1633;
-  --card: #0c1838;
-  --card-hover: #101f45;
-  --popover: #0c1838;
+  --background: #111519;
+  --secondary-background: #111519;
+  --surface: #1a1f24;
+  --card: #1a1f24;
+  --card-hover: #222830;
+  --popover: #1a1f24;
 
-  --foreground: #ffffff;
-  --foreground-soft: #d6dcec;
-  --muted-foreground: #b7bed1;
+  --foreground: #f5f3ee;
+  --foreground-soft: #f5f3ee;
+  --muted-foreground: #a3aab4;
 
-  --border: #1b2747;
-  --border-soft: #16213d;
+  --border: #2b3239;
+  --border-soft: #2b3239;
 
-  --input: #111d3a;
-  --input-background: #111d3a;
+  --input: #111519;
+  --input-background: #111519;
 
-  --navbar-bg: rgba(6, 18, 43, 0.98);
+  --navbar-bg: rgba(17, 21, 25, 0.98);
 }
 
 @theme inline {
@@ -122,6 +72,7 @@
   --color-verification: var(--verification);
   --color-warning: var(--warning);
   --color-danger: var(--danger);
+  --color-destructive: var(--danger);
 
   /* Borders */
   --color-border: var(--border);

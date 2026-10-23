@@ -67,7 +67,10 @@ export function Root() {
       </main>
 
       {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-card border-t-2 border-white px-6 md:px-12 py-3 md:py-5 pb-safe z-50 rounded-t-3xl md:rounded-t-[2.5rem] shadow-[0_-8px_30px_rgba(0,0,0,0.5)]">
+      <nav
+        className="fixed bottom-0 left-0 right-0 bg-card border-t-2 px-6 md:px-12 py-3 md:py-5 pb-safe z-50 rounded-t-3xl md:rounded-t-[2.5rem] shadow-[0_-8px_30px_rgba(0,0,0,0.5)]"
+        style={{ borderStyle: "inset", borderColor: "var(--nav-border)", borderWidth: "2px 0px 0px" }}
+      >
         <div className="flex justify-between items-center max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
           <NavItem
             to="/"
@@ -86,7 +89,7 @@ export function Root() {
           <NavItem
             to="/publish"
             icon={
-              <PenSquare className="w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9" />
+              <PenSquare className="w-6 h-6 md:w-8 md:h-8 lg:w-9 lg:h-9 text-[#E1A000]" />
             }
             label="نشر"
             isCenter
@@ -128,15 +131,18 @@ function NavItem({
       className={({ isActive }) =>
         `flex flex-col items-center justify-center gap-1 relative ${
           isActive
-            ? "text-verification"
-            : "text-secondary hover:text-white transition-colors"
+            ? "text-foreground"
+            : "text-secondary hover:text-foreground transition-colors"
         }`
       }
     >
       {({ isActive }) => (
         <>
           {isCenter ? (
-            <div className="absolute -top-8 md:-top-10 lg:-top-12 bg-card border border-border rounded-full shadow-lg text-primary hover:text-white transition-colors px-[25px] py-[12px] md:px-[30px] md:py-[15px] lg:px-[35px] lg:py-[18px]">
+            <div
+              className="absolute -top-8 md:-top-10 lg:-top-12 bg-card border rounded-full shadow-lg text-foreground hover:text-secondary transition-colors px-[25px] py-[12px] md:px-[30px] md:py-[15px] lg:px-[35px] lg:py-[18px]"
+              style={{ borderStyle: "ridge", borderColor: "var(--publish-border)" }}
+            >
               {icon}
             </div>
           ) : (
@@ -145,14 +151,14 @@ function NavItem({
               {isActive && (
                 <motion.div
                   layoutId="nav-indicator"
-                  className="absolute -bottom-2 md:-bottom-3 left-1/2 w-1.5 h-1.5 md:w-2 md:h-2 bg-verification rounded-full"
+                  className="absolute -bottom-2 md:-bottom-3 left-1/2 w-1.5 h-1.5 md:w-2 md:h-2 bg-foreground rounded-full"
                   style={{ x: "-50%" }}
                 />
               )}
             </div>
           )}
           <span
-            className={`text-[10px] md:text-xs lg:text-sm font-bold mt-1 md:mt-2 ${isCenter ? "mt-6 md:mt-8 lg:mt-10" : ""}`}
+            className={`text-[10px] md:text-xs lg:text-sm font-bold mt-1 md:mt-2 ${isCenter ? "mt-6 md:mt-8 lg:mt-10 text-[#E1A000]" : ""}`}
           >
             {label}
           </span>
