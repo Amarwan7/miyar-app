@@ -145,7 +145,7 @@ function NavItem({
               {isActive && (
                 <motion.div
                   layoutId="nav-indicator"
-                  className="absolute -bottom-2 md:-bottom-3 left-1/2 w-1.5 h-1.5 md:w-2 md:h-2 bg-verification rounded-full"
+                  className="absolute -bottom-2 md:-bottom-3 left-1/2 w-1.5 h-1.5 md:w-2 md:h-2 bg-foreground rounded-full"
                   style={{ x: "-50%" }}
                 />
               )}

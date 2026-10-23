@@ -57,7 +57,7 @@ export function Home() {
           <button
             onClick={() => setIsLocal(false)}
             className={`flex-1 py-2 md:py-3 lg:py-4 text-sm md:text-base lg:text-lg font-bold rounded-lg md:rounded-xl transition-colors ${
-              !isLocal ? "bg-verification text-background" : "text-secondary hover:text-foreground"
+              !isLocal ? "bg-foreground text-background" : "text-secondary hover:text-foreground"
             }`}
           >
             الساحة العالمية
@@ -65,7 +65,7 @@ export function Home() {
           <button
             onClick={() => setIsLocal(true)}
             className={`flex-1 py-2 md:py-3 lg:py-4 text-sm md:text-base lg:text-lg font-bold rounded-lg md:rounded-xl transition-colors ${
-              isLocal ? "bg-verification text-background" : "text-secondary hover:text-foreground"
+              isLocal ? "bg-foreground text-background" : "text-secondary hover:text-foreground"
             }`}
           >
             الشأن المحلي

@@ -77,7 +77,7 @@ export function Publish() {
         </div>
       </div>
 
-      <button className="mt-8 w-full bg-verification hover:bg-verification/90 text-background font-bold text-lg py-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-sm">
+      <button className="mt-8 w-full bg-foreground hover:bg-foreground/90 text-background font-bold text-lg py-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-sm">
         <Cpu size={20} />
         إرسال للتحليل الأولي
       </button>
