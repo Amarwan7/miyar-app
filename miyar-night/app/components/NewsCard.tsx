@@ -41,7 +41,7 @@ export function NewsCard({ article }: NewsCardProps) {
             className="w-full h-full object-cover"
           />
           {/* Solid color gradient fallback using solid overlays instead of blur */}
-          <div className="absolute inset-0 bg-background/60" />
+          <div className="absolute inset-0 bg-[var(--image-overlay)]" />
           
           <div className="absolute top-4 md:top-5 right-4 md:right-5">
             <span className="bg-card text-foreground text-[10px] md:text-xs lg:text-sm font-bold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-border uppercase tracking-wider">
