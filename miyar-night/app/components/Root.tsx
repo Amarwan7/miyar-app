@@ -141,7 +141,7 @@ function NavItem({
           {isCenter ? (
             <div
               className="absolute -top-8 md:-top-10 lg:-top-12 bg-card border rounded-full shadow-lg text-foreground hover:text-secondary transition-colors px-[25px] py-[12px] md:px-[30px] md:py-[15px] lg:px-[35px] lg:py-[18px]"
-              style={{ borderStyle: "ridge", borderColor: "#ffffff" }}
+              style={{ borderStyle: "ridge", borderColor: "var(--publish-border)" }}
             >
               {icon}
             </div>
