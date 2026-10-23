@@ -209,10 +209,10 @@ export function Search() {
               "
             >
               <AlertTriangle
-                className="text-warning w-4.5 h-4.5 md:w-6 md:h-6 lg:w-7 lg:h-7"
+                className="text-[#E1A000] w-4.5 h-4.5 md:w-6 md:h-6 lg:w-7 lg:h-7"
               />
 
-              <span className="font-bold text-sm md:text-base lg:text-lg">
+              <span className="font-bold text-sm md:text-base lg:text-lg text-[#E1A000]">
                 غير مؤكد
               </span>
             </button>

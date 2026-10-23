@@ -21,11 +21,11 @@ export function NewsCard({ article }: NewsCardProps) {
   const isTrusted = article.trustState === "موثوق";
   
   const getTrustColor = () => {
-    return isTrusted ? "text-verification" : "text-destructive";
+    return isTrusted ? "text-verification" : "text-[#E1A000]";
   };
 
   const getTrustBgColor = () => {
-    return isTrusted ? "bg-verification/10" : "bg-danger/10"; // Using solid transparency instead of blur
+    return isTrusted ? "bg-verification/10" : "bg-[#E1A000]/10"; // Using solid transparency instead of blur
   };
 
   return (

@@ -11,8 +11,8 @@ export function Article() {
   const relatedArticles = mockArticles.filter(a => a.id !== article.id && a.category === article.category).slice(0, 2);
 
   const isTrusted = article.trustState === "موثوق";
-  const trustColor = isTrusted ? "text-verification" : "text-destructive";
-  const trustBg = isTrusted ? "bg-verification/10" : "bg-danger/10";
+  const trustColor = isTrusted ? "text-verification" : "text-[#E1A000]";
+  const trustBg = isTrusted ? "bg-verification/10" : "bg-[#E1A000]/10";
   const TrustIcon = isTrusted ? CheckCircle : AlertTriangle;
 
   return (
