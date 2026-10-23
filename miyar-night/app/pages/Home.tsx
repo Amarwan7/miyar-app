@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { mockArticles, categories } from "../data/mockData";
 import { NewsCard } from "../components/NewsCard";
-import { Bell, Activity, Radar } from "lucide-react";
+import { Bell, Activity, Radar, Moon, Sun } from "lucide-react";
 import { motion } from "motion/react";
+import { useTheme } from "../hooks/useTheme";
 
 export function Home() {
   const [activeCategory, setActiveCategory] = useState("الكل");
   const [isLocal, setIsLocal] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const filteredArticles = mockArticles.filter((article) => {
     if (activeCategory !== "الكل" && article.category !== activeCategory) return false;
@@ -45,6 +47,17 @@ export function Home() {
 
           {/* Bell button */}
           <div className="flex items-center gap-3">
+            <button
+              onClick={toggleTheme}
+              aria-label={theme === "day" ? "التبديل إلى الوضع الليلي" : "التبديل إلى الوضع النهاري"}
+              className="w-11 h-11 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl md:rounded-3xl bg-card flex items-center justify-center border border-border text-foreground shadow-sm hover:bg-card/80 transition-colors"
+            >
+              {theme === "day" ? (
+                <Moon className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
+              ) : (
+                <Sun className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
+              )}
+            </button>
             <button className="w-11 h-11 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl md:rounded-3xl bg-card flex items-center justify-center border border-border text-foreground relative shadow-sm hover:bg-card/80 transition-colors">
               <Bell className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
               <span className="absolute top-2.5 right-2.5 md:top-3.5 md:right-3.5 lg:top-4 lg:right-4 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 bg-destructive rounded-full border-2 border-card" />
