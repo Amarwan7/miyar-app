@@ -67,7 +67,7 @@ export function Root() {
       </main>
 
       {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-card border-t-2 border-white px-6 md:px-12 py-3 md:py-5 pb-safe z-50 rounded-t-3xl md:rounded-t-[2.5rem] shadow-[0_-8px_30px_rgba(0,0,0,0.5)]">
+      <nav className="fixed bottom-0 left-0 right-0 bg-card border-t-2 border-border px-6 md:px-12 py-3 md:py-5 pb-safe z-50 rounded-t-3xl md:rounded-t-[2.5rem] shadow-[0_-8px_30px_rgba(0,0,0,0.5)]">
         <div className="flex justify-between items-center max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
           <NavItem
             to="/"
@@ -129,14 +129,14 @@ function NavItem({
         `flex flex-col items-center justify-center gap-1 relative ${
           isActive
             ? "text-verification"
-            : "text-secondary hover:text-white transition-colors"
+            : "text-secondary hover:text-foreground transition-colors"
         }`
       }
     >
       {({ isActive }) => (
         <>
           {isCenter ? (
-            <div className="absolute -top-8 md:-top-10 lg:-top-12 bg-card border border-border rounded-full shadow-lg text-primary hover:text-white transition-colors px-[25px] py-[12px] md:px-[30px] md:py-[15px] lg:px-[35px] lg:py-[18px]">
+            <div className="absolute -top-8 md:-top-10 lg:-top-12 bg-card border border-border rounded-full shadow-lg text-primary hover:text-foreground transition-colors px-[25px] py-[12px] md:px-[30px] md:py-[15px] lg:px-[35px] lg:py-[18px]">
               {icon}
             </div>
           ) : (

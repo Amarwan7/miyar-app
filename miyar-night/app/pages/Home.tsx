@@ -20,38 +20,21 @@ export function Home() {
         <div className="flex items-center justify-between mb-6 md:mb-10">
           {/* Logo + App name */}
           <div className="flex items-center gap-2 md:gap-3">
-            <div
-              className="flex items-center justify-center shrink-0"
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F35ef38cd5bdf40b6b02e1f614868613b%2F388b8476362243d3bca9dc3e36cab016?format=webp&width=800&height=1200"
+              alt="Miyar logo"
+              className="shrink-0 rounded-[28%] object-contain"
               style={{
                 width: "clamp(2.8rem, 8vw, 3.8rem)",
                 height: "clamp(2.8rem, 8vw, 3.8rem)",
-                background: "#2563eb",
-                borderRadius: "28%",
-                boxShadow: "0 2px 14px rgba(37,99,235,0.35)",
               }}
-            >
-              <span
-                style={{
-                  fontFamily: "Cairo, sans-serif",
-                  fontWeight: 900,
-                  fontSize: "clamp(1.5rem, 4.5vw, 2.1rem)",
-                  color: "#ffffff",
-                  lineHeight: 1,
-                  display: "block",
-                  transform: "rotate(-6deg) translateY(1px)",
-                  textShadow: "0 2px 8px rgba(255,255,255,0.25)",
-                  letterSpacing: "-0.03em",
-                }}
-              >
-                ق
-              </span>
-            </div>
+            />
             <span
+              className="text-foreground"
               style={{
                 fontFamily: "Cairo, sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(1.15rem, 3vw, 1.6rem)",
-                color: "#ffffff",
                 letterSpacing: "-0.01em",
                 lineHeight: 1,
               }}
@@ -62,7 +45,7 @@ export function Home() {
 
           {/* Bell button */}
           <div className="flex items-center gap-3">
-            <button className="w-11 h-11 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl md:rounded-3xl bg-card flex items-center justify-center border border-border text-white relative shadow-sm hover:bg-card/80 transition-colors">
+            <button className="w-11 h-11 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl md:rounded-3xl bg-card flex items-center justify-center border border-border text-foreground relative shadow-sm hover:bg-card/80 transition-colors">
               <Bell className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
               <span className="absolute top-2.5 right-2.5 md:top-3.5 md:right-3.5 lg:top-4 lg:right-4 w-2.5 h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 bg-destructive rounded-full border-2 border-card" />
             </button>
@@ -74,7 +57,7 @@ export function Home() {
           <button
             onClick={() => setIsLocal(false)}
             className={`flex-1 py-2 md:py-3 lg:py-4 text-sm md:text-base lg:text-lg font-bold rounded-lg md:rounded-xl transition-colors ${
-              !isLocal ? "bg-verification text-navy-dark" : "text-secondary hover:text-white"
+              !isLocal ? "bg-verification text-background" : "text-secondary hover:text-foreground"
             }`}
           >
             الساحة العالمية
@@ -82,7 +65,7 @@ export function Home() {
           <button
             onClick={() => setIsLocal(true)}
             className={`flex-1 py-2 md:py-3 lg:py-4 text-sm md:text-base lg:text-lg font-bold rounded-lg md:rounded-xl transition-colors ${
-              isLocal ? "bg-verification text-navy-dark" : "text-secondary hover:text-white"
+              isLocal ? "bg-verification text-background" : "text-secondary hover:text-foreground"
             }`}
           >
             الشأن المحلي
@@ -96,7 +79,7 @@ export function Home() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`flex-shrink-0 whitespace-nowrap rounded-xl md:rounded-2xl text-sm md:text-base lg:text-lg font-bold border transition-colors snap-start ${ activeCategory === cat ? "bg-card text-white border-white/20 shadow-sm" : "bg-transparent text-secondary border-border hover:bg-card hover:text-white" } px-6 md:px-10 lg:px-14 py-2.5 md:py-3.5 lg:py-4`}
+                className={`flex-shrink-0 whitespace-nowrap rounded-xl md:rounded-2xl text-sm md:text-base lg:text-lg font-bold border transition-colors snap-start ${ activeCategory === cat ? "bg-card text-foreground border-border shadow-sm" : "bg-transparent text-secondary border-border hover:bg-card hover:text-foreground" } px-6 md:px-10 lg:px-14 py-2.5 md:py-3.5 lg:py-4`}
               >
                 {cat}
               </button>
