@@ -128,7 +128,7 @@ function NavItem({
       className={({ isActive }) =>
         `flex flex-col items-center justify-center gap-1 relative ${
           isActive
-            ? "text-verification"
+            ? "text-foreground"
             : "text-secondary hover:text-foreground transition-colors"
         }`
       }
@@ -136,7 +136,7 @@ function NavItem({
       {({ isActive }) => (
         <>
           {isCenter ? (
-            <div className="absolute -top-8 md:-top-10 lg:-top-12 bg-card border border-border rounded-full shadow-lg text-primary hover:text-foreground transition-colors px-[25px] py-[12px] md:px-[30px] md:py-[15px] lg:px-[35px] lg:py-[18px]">
+            <div className="absolute -top-8 md:-top-10 lg:-top-12 bg-card border border-border rounded-full shadow-lg text-foreground hover:text-secondary transition-colors px-[25px] py-[12px] md:px-[30px] md:py-[15px] lg:px-[35px] lg:py-[18px]">
               {icon}
             </div>
           ) : (
