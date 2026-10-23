@@ -54,7 +54,7 @@
   --navbar-border: rgba(255, 255, 255, 0.05);
   --nav-border: #ffffff;
   --publish-border: #ffffff;
-  --image-overlay: color-mix(in srgb, #111519 60%, transparent);
+  --image-overlay: color-mix(in srgb, #111519 15%, transparent);
 
   /* News Status */
   --trusted-bg: rgba(69, 168, 117, 0.14);
