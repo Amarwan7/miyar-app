@@ -1,0 +1,54 @@
+:root {
+  /* Night Theme (PDF design system) */
+  --background: #111519;
+  --secondary-background: #111519;
+  --surface: #1a1f24;
+  --card: #1a1f24;
+  --card-hover: #222830;
+  --popover: #1a1f24;
+
+  /* Typography */
+  --foreground: #f5f3ee;
+  --foreground-soft: #f5f3ee;
+  --muted-foreground: #a3aab4;
+  --text-dim: #a3aab4;
+
+  /* Accent System */
+  --primary: #e54848;
+  --primary-foreground: #ffffff;
+
+  --secondary: #a3aab4;
+  --secondary-foreground: #111519;
+
+  --verification: #45a875;
+  --warning: #e6a23c;
+  --danger: #e54848;
+
+  /* Borders */
+  --border: #2b3239;
+  --border-soft: #2b3239;
+  --input: #111519;
+  --input-background: #111519;
+  --switch-background: #2b3239;
+
+  /* UI Depth */
+  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.18);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.22);
+
+  /* Rings */
+  --ring: #e54848;
+
+  /* Navigation */
+  --navbar-bg: rgba(17, 21, 25, 0.96);
+  --navbar-border: rgba(255, 255, 255, 0.05);
+  --nav-border: #ffffff;
+  --publish-border: #ffffff;
+  --image-overlay: color-mix(in srgb, #111519 15%, transparent);
+
+  /* News Status */
+  --trusted-bg: rgba(69, 168, 117, 0.14);
+  --trusted-text: #45a875;
+
+  --unverified-bg: rgba(230, 162, 60, 0.12);
+  --unverified-text: #f6c76a;
+}

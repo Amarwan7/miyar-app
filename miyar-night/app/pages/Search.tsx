@@ -42,7 +42,7 @@ const reporters = [
 
 export function Search() {
   return (
-    <div className="min-h-screen bg-background text-white overflow-y-auto pb-36">
+    <div className="min-h-screen bg-background text-foreground overflow-y-auto pb-36">
       {/* Header */}
       <div className="px-5 md:px-12 lg:px-24 pt-8 md:pt-12 pb-6 border-b border-border/60 max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-6 md:mb-8">
@@ -88,7 +88,7 @@ export function Search() {
               text-[15px]
               md:text-lg
               lg:text-xl
-              text-white
+              text-foreground
               placeholder:text-muted-foreground
               focus:outline-none
               focus:border-primary/50
@@ -209,10 +209,10 @@ export function Search() {
               "
             >
               <AlertTriangle
-                className="text-warning w-4.5 h-4.5 md:w-6 md:h-6 lg:w-7 lg:h-7"
+                className="text-[#E1A000] w-4.5 h-4.5 md:w-6 md:h-6 lg:w-7 lg:h-7"
               />
 
-              <span className="font-bold text-sm md:text-base lg:text-lg">
+              <span className="font-bold text-sm md:text-base lg:text-lg text-[#E1A000]">
                 غير مؤكد
               </span>
             </button>

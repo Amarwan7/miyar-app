@@ -21,11 +21,11 @@ export function NewsCard({ article }: NewsCardProps) {
   const isTrusted = article.trustState === "موثوق";
   
   const getTrustColor = () => {
-    return isTrusted ? "text-verification" : "text-destructive";
+    return isTrusted ? "text-verification" : "text-[#E1A000]";
   };
 
   const getTrustBgColor = () => {
-    return isTrusted ? "bg-[#2ED3B715]" : "bg-[#EF444415]"; // Using solid transparency instead of blur
+    return isTrusted ? "bg-verification/10" : "bg-[#E1A000]/10"; // Using solid transparency instead of blur
   };
 
   return (
@@ -41,10 +41,10 @@ export function NewsCard({ article }: NewsCardProps) {
             className="w-full h-full object-cover"
           />
           {/* Solid color gradient fallback using solid overlays instead of blur */}
-          <div className="absolute inset-0 bg-[#06122B]/60" />
+          <div className="absolute inset-0 bg-[var(--image-overlay)]" />
           
           <div className="absolute top-4 md:top-5 right-4 md:right-5">
-            <span className="bg-card text-white text-[10px] md:text-xs lg:text-sm font-bold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-border uppercase tracking-wider">
+            <span className="bg-card text-foreground text-[10px] md:text-xs lg:text-sm font-bold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-border uppercase tracking-wider">
               {article.category}
             </span>
           </div>
@@ -52,7 +52,7 @@ export function NewsCard({ article }: NewsCardProps) {
           <div className="absolute bottom-4 md:bottom-5 left-4 md:left-5 right-4 md:right-5 flex justify-between items-end">
             <div className="flex items-center gap-2">
               <div className="bg-card rounded-full px-3 md:px-4 py-1.5 md:py-2 flex items-center gap-2 border border-border shadow-sm">
-                <span className="text-white font-bold text-xs md:text-sm">{article.source}</span>
+                <span className="text-foreground font-bold text-xs md:text-sm">{article.source}</span>
                 {isTrusted && <CheckCircle className="w-3.5 h-3.5 md:w-4 md:h-4 text-verification" />}
               </div>
             </div>
@@ -72,7 +72,7 @@ export function NewsCard({ article }: NewsCardProps) {
             <span>{article.timestamp}</span>
           </div>
 
-          <h3 className="text-[1.35rem] md:text-2xl lg:text-3xl font-bold text-white mb-3 md:mb-4 leading-[1.4] md:leading-[1.5]">
+          <h3 className="text-[1.35rem] md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4 leading-[1.4] md:leading-[1.5]">
             {article.title}
           </h3>
           
@@ -90,7 +90,7 @@ export function NewsCard({ article }: NewsCardProps) {
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2 md:mb-3">
-                  <span className="text-xs md:text-sm lg:text-base font-bold text-white tracking-wide flex items-center gap-1.5 md:gap-2">
+                  <span className="text-xs md:text-sm lg:text-base font-bold text-foreground tracking-wide flex items-center gap-1.5 md:gap-2">
                     <Activity className={`w-3 h-3 md:w-4 md:h-4 ${getTrustColor()}`} />
                     موجز المصداقية
                   </span>
@@ -106,14 +106,14 @@ export function NewsCard({ article }: NewsCardProps) {
           <div className="flex items-center justify-end gap-4 md:gap-6 pt-2">
             <button 
               onClick={(e) => e.preventDefault()} 
-              className="flex items-center gap-2 text-secondary hover:text-white transition-colors"
+              className="flex items-center gap-2 text-secondary hover:text-foreground transition-colors"
             >
               <MessageSquare className="w-5 h-5 md:w-6 md:h-6" />
               <span className="text-sm md:text-base font-bold mt-0.5">تعليق</span>
             </button>
             <button 
               onClick={(e) => e.preventDefault()} 
-              className="flex items-center gap-2 text-secondary hover:text-white transition-colors"
+              className="flex items-center gap-2 text-secondary hover:text-foreground transition-colors"
             >
               <Share2 className="w-5 h-5 md:w-6 md:h-6" />
               <span className="text-sm md:text-base font-bold mt-0.5">مشاركة</span>
