@@ -1,5 +1,5 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
-@import './night.css';
-@import './day.css';
+@import './themes/night/night.css';
+@import './themes/day/day.css';
